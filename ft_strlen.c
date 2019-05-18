@@ -6,10 +6,10 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 11:48:00 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/18 11:52:11 by mdube            ###   ########.fr       */
+/*   Updated: 2019/05/18 11:55:24 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+
 int			ft_strlen(char *str)
 {
 	int i;
@@ -19,10 +19,4 @@ int			ft_strlen(char *str)
 		i++;
 	
 	return (i);
-}
-
-int			main()
-{
-	printf("%d", ft_strlen("Mlungisi"));
-	return(0);
 }
