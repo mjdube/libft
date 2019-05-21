@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 09:56:33 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/18 10:06:20 by mdube            ###   ########.fr       */
+/*   Updated: 2019/05/21 10:33:36 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@ int			ft_isascii(unsigned char c)
 {
 	int		output;
 
-	if(c >= 000 && c <= 0117)
+	if (c >= 000 && c <= 0117)
 		output = 1;
-	else if(c >= 0 && c <= 127)
+	else if (c >= 0 && c <= 127)
 		output = 1;
 	else
 		output = 0;
-
 	return (output);
 }
