@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 11:37:02 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/18 11:44:56 by mdube            ###   ########.fr       */
+/*   Updated: 2019/05/21 10:41:55 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@ unsigned char		ft_tolower(unsigned char c)
 {
 	unsigned char output;
 
-	if(c >= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		output = c + 32;
-
 	return (output);
 }
