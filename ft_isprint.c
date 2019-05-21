@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 10:55:10 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/18 11:20:40 by mdube            ###   ########.fr       */
+/*   Updated: 2019/05/21 10:51:00 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@ int			ft_isprint(unsigned char c)
 {
 	int output;
 
-	if(c >= ' ' && c <= '~')
+	if (c >= ' ' && c <= '~')
 		output = 1;
-	else if(c == '\r' || c == '\t' || c == '\f' || c == '\v' || c == '\n')
+	else if (c == '\r' || c == '\t' || c == '\f' || c == '\v' || c == '\n')
 		output = 1;
-	else 
+	else
 		output = 0;
-
 	return (output);
 }
