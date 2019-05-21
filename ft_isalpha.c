@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 09:17:59 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/18 09:20:59 by mdube            ###   ########.fr       */
+/*   Updated: 2019/05/21 10:28:01 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@ int			ft_isalpha(unsigned char c)
 {
 	int output;
 
-	if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		output = 1;
 	else
 		output = 0;
-	return (output); 
+	return (output);
 }
