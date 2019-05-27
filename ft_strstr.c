@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 09:28:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/27 11:26:21 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/22 11:21:53 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/27 13:08:40 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isdigit(unsigned char c)
-{
-	int output;
+#include <string.h>
 
-	if (c >= '0' && c <= '9')
-		output = 1;
-	else
-		output = 0;
-	return (output);
+char		*ft_strstr(const char *hay, const char *needle)
+{
+	int		i;
+	int		j;
+	char	*str;
+
+	i = 0;
+	if (hay[0] == '\0')
+		return (NULL);
+	while (hay[i])
+	{
+		j = 0;
+		while (needle[j] == hay[i + j])
+		{
+			if (needle[j + 1] == '\0')
+			{
+				return (char *)&hay[i];
+			}
+			j++;
+		}
+		i++;
+	}
+	return (NULL);
 }

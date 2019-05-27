@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 09:28:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/27 11:26:21 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/27 13:11:34 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/27 15:38:40 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isdigit(unsigned char c)
+void		*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	int output;
+	char *d;
+	const char *s;
+	int i;
 
-	if (c >= '0' && c <= '9')
-		output = 1;
-	else
-		output = 0;
-	return (output);
+	d = (char *)dst;
+	s = (const char)src;
+	i = 0;
+	while (s[i] && i < n)
+	{
+		d[i] = s[i];
+		if (s[i] == (char)c)
+			return (dst + i + 1);
+		i++;
+	}
+
 }

@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 09:28:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/27 11:26:21 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/22 17:01:18 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/22 17:23:41 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isdigit(unsigned char c)
+int			ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int output;
+	int i;
+	int a;
+	int b;
 
-	if (c >= '0' && c <= '9')
-		output = 1;
-	else
-		output = 0;
-	return (output);
+	i = 0;
+	a = 0;
+	b = 0;
+	while (s1[i] && i < n)
+	{
+		if (s1[i] == s2[i])
+		{
+			a += (int)s1[i];
+			b += (int)s2[i];
+		}
+		else if (s1[i] != s2[i])
+		{
+			a = (int)s1[i];
+			b = (int)s2[i];
+			return (a - b);
+		}
+		i++;
+	}
+	return (a - b);
 }

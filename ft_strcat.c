@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 09:28:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/27 11:26:21 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/21 11:38:53 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/21 16:39:35 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isdigit(unsigned char c)
+char		*ft_strcat(char *s1, char *s2)
 {
-	int output;
+	int i;
+	int j;
 
-	if (c >= '0' && c <= '9')
-		output = 1;
-	else
-		output = 0;
-	return (output);
+	i = 0;
+	while (s1[i])
+		i++;
+	j = 0;
+	while (s2[j])
+	{
+		s1[i + j] = s2[j];
+		j++;
+	}
+	s1[i + j] = '\0';
+	return (s1);
 }

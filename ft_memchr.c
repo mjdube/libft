@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 09:28:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/27 11:26:21 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/24 13:39:21 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/27 11:29:05 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isdigit(unsigned char c)
+void		*ft_memchr(const void *s, int c, size_t n)
 {
-	int output;
+	int		i;
+	char	*src;
+	char	chr;
 
-	if (c >= '0' && c <= '9')
-		output = 1;
-	else
-		output = 0;
-	return (output);
+	chr = (char)c;
+	src = (char *)s;
+	i = 0;
+	while (src[i])
+	{
+		if (src[i] == chr)
+			return (&src[i]);
+		i++;
+	}
+	return (0);
 }

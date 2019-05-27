@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 09:28:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/27 11:26:21 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/24 13:09:57 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/27 11:38:01 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isdigit(unsigned char c)
+void		*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int output;
+	int		i;
+	char	*s;
+	char	*d;
 
-	if (c >= '0' && c <= '9')
-		output = 1;
-	else
-		output = 0;
-	return (output);
+	s = (char *)src;
+	d = (char *)dst;
+	i = 0;
+	while (s[i] && i < len)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	d[i] = '\0';
+	return (dst);
 }
