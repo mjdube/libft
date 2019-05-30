@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:43:32 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/30 13:57:16 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/30 16:39:35 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/30 16:52:12 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		bzero(void *s, size_t n)
-{
-	char	*dst;
-	int		i;
+#include <stdlib.h>
+#include "libft.h"
 
-	dst = (char *)s;
-	while (i < n)
+char		*ft_strmapi(const char *s, char (*f) (unsigned int, char))
+{
+	int		i;
+	char	*new;
+
+	new = (char)malloc(sizeof(s) * ft_strlen(s));
+	i = 0;
+	while (s[i])
 	{
-		dst[i] = 0;
+		new[i] = f(i, s[i]);
 		i++;
 	}
 }

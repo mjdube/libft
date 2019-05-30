@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:43:32 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/30 13:57:16 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/30 16:53:31 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/30 16:59:37 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		bzero(void *s, size_t n)
+#include "libft.h"
+
+int			ft_strequ(const char *s1, const char *s2)
 {
-	char	*dst;
 	int		i;
 
-	dst = (char *)s;
-	while (i < n)
-	{
-		dst[i] = 0;
-		i++;
-	}
+	if (strcmp(s1, s2) == 0)
+		i = 1;
+	else
+		i = 0;
+	return (i);
 }

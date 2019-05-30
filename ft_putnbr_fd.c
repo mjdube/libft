@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:43:32 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/30 13:57:16 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/30 13:13:13 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/30 13:41:24 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		bzero(void *s, size_t n)
-{
-	char	*dst;
-	int		i;
+#include "libft.h"
 
-	dst = (char *)s;
-	while (i < n)
+void		ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
 	{
-		dst[i] = 0;
-		i++;
+		ft_putstr_fd("-2147483648", fd);
+	}
+	if (0 < n)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	if (10 <= n)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putchar_fd(n % 10 + '0', fd);
+	}
+	else
+	{
+		ft_putchar(n + '0', fd);
 	}
 }

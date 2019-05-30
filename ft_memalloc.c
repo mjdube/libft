@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:43:32 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/30 13:57:16 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/30 13:48:22 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/30 14:04:21 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		bzero(void *s, size_t n)
-{
-	char	*dst;
-	int		i;
+#include <stdlib.h>
+#include "libft.h"
 
-	dst = (char *)s;
-	while (i < n)
-	{
-		dst[i] = 0;
-		i++;
-	}
+void		*ft_memalloc(size_t size)
+{
+	void	*s;
+
+	if (!(s = malloc(sizeof(s) * size)))
+		return (NULL);
+	ft_bzero(s, size);
+	return (s);
 }

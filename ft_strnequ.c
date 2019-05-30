@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:43:32 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/30 13:57:16 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/30 17:00:59 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/30 17:08:44 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		bzero(void *s, size_t n)
-{
-	char	*dst;
-	int		i;
+#include "libft.h"
 
-	dst = (char *)s;
-	while (i < n)
-	{
-		dst[i] = 0;
-		i++;
-	}
+int			ft_strnequ(const char *s1, const char *s2, size_t n)
+{
+	int i;
+
+	if ((ft_strncmp(s1, s2, n)) == 0)
+		i = 1;
+	else
+		i = 0;
+	return (i);
 }

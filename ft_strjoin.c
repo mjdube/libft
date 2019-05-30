@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:43:32 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/30 13:57:16 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/30 17:18:13 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/30 17:31:25 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		bzero(void *s, size_t n)
+#include <stdlib.h>
+#include "libft.h"
+
+char		*ft_strjoin(const char *s1, const char *s2)
 {
-	char	*dst;
+	char	*new;
+	char	*fresh;
 	int		i;
 
-	dst = (char *)s;
-	while (i < n)
+	fresh = ft_strcat(s1, s2);
+	new = (char *)malloc(sizeof(char) * ft_strlen(fresh) + 1);
+	i = 0;
+	while (fresh[i])
 	{
-		dst[i] = 0;
+		new[i] = fresh[i];
 		i++;
 	}
+	new[i] = '\0';
+	return (new);
 }

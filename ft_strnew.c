@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 15:43:32 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/30 13:57:16 by mdube            ###   ########.fr       */
+/*   Created: 2019/05/30 14:10:03 by mdube             #+#    #+#             */
+/*   Updated: 2019/05/30 15:16:34 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		bzero(void *s, size_t n)
-{
-	char	*dst;
-	int		i;
+#include <string.h>
+#include <stdlib.h>
 
-	dst = (char *)s;
-	while (i < n)
-	{
-		dst[i] = 0;
-		i++;
-	}
+char		*ft_strnew(size_t size)
+{
+	char *str;
+
+	if (!(str = (char *)malloc(sizeof(char) * size + 1)))
+		return (NULL);
+	return (str);
 }
