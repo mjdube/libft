@@ -6,8 +6,8 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:04:21 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/29 11:20:04 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/01 14:44:41 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
+#include "libft.h"
+char		*ft_strsub(const char *s, unsigned int start, size_t len);
