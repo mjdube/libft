@@ -22,7 +22,7 @@ char		*ft_strmap(const char *s, char (*f)(char))
 	new = (char *)malloc(sizeof(char) * ft_strlen(s));
 	while (s[i])
 	{
-		new[i] = f(s[i]);
+		new[i] = f(&s[i]);
 		i++;
 	}
 	return (new);

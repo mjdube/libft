@@ -22,7 +22,7 @@ char		*ft_strmapi(const char *s, char (*f) (unsigned int, char))
 	i = 0;
 	while (s[i])
 	{
-		new[i] = f(i, s[i]);
+		new[i] = f(i, &s[i]);
 		i++;
 	}
 }

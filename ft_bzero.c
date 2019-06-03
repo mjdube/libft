@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void		bzero(void *s, size_t n)
+void		ft_bzero(void *s, size_t n)
 {
 	char	*dst;
-	int		i;
+	int	i;
 
 	dst = (char *)s;
 	while (i < n)

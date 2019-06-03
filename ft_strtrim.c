@@ -12,6 +12,7 @@
 
 #include "libft.h"
 #include <string.h>
+#include <stdlib.h>
 
 int		ft_isspace(char c)
 {
@@ -32,8 +33,7 @@ char 		*ft_strtrim(const char *s)
 	int k;
 
 	i = 0;
-	new = (char *)malloc(sizeof(char) * strlen(s) + 1);
-	if (new == NULL)
+	if (!(new = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)))
 		return (NULL);
 	while (ft_isspace(s[i]) == 1)
 		i++;
