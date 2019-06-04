@@ -6,18 +6,21 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:54:52 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/28 11:17:11 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 17:06:20 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t		ft_strlcat(char *dst, const char *src, size_t n)
+#include <string.h>
+
+size_t				ft_strlcat(char *dst, const char *src, size_t n)
 {
-	int		i;
-	int		j;
-	size_t	len;
+	unsigned int	i;
+	unsigned int	j;
+	size_t			len;
 
 	i = 0;
 	j = 0;
+	len = 0;
 	if (n == 0)
 	{
 		while (src[i])

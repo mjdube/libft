@@ -6,15 +6,17 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 12:19:32 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/27 14:13:30 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 15:30:48 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		*ft_memcpy(void *dst, const void *src, size_t n)
+#include <string.h>
+
+void				*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*d;
-	char	*s;
-	int		i;
+	char			*d;
+	const char		*s;
+	unsigned int	i;
 
 	i = 0;
 	d = (char *)dst;

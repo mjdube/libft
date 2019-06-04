@@ -6,15 +6,17 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 17:01:18 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/22 17:23:41 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 17:25:28 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_strncmp(const char *s1, const char *s2, size_t n)
+#include <string.h>
+
+int					ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
-	int a;
-	int b;
+	unsigned int	i;
+	int				a;
+	int				b;
 
 	i = 0;
 	a = 0;

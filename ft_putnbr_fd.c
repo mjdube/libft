@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 13:13:13 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/30 13:41:24 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 15:44:54 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ void		ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n % 10 + '0', fd);
 	}
 	else
-		ft_putchar(n + '0', fd);
+		ft_putchar_fd(n + '0', fd);
 }

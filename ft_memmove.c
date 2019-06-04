@@ -6,15 +6,17 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:09:57 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/27 11:38:01 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 15:34:37 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		*ft_memmove(void *dst, const void *src, size_t len)
+#include <string.h>
+
+void				*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		i;
-	char	*s;
-	char	*d;
+	unsigned int	i;
+	const char		*s;
+	char			*d;
 
 	s = (const char *)src;
 	d = (char *)dst;

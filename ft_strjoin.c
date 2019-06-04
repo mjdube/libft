@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 17:18:13 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/30 17:31:25 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 16:59:40 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char		*ft_strjoin(const char *s1, const char *s2)
 	char	*fresh;
 	int		i;
 
-	fresh = ft_strcat(s1, s2);
+	fresh = ft_strcat((char *)s1, s2);
 	new = (char *)malloc(sizeof(char) * ft_strlen(fresh) + 1);
 	i = 0;
 	while (fresh[i])

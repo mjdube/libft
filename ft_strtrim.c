@@ -6,13 +6,14 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 18:00:45 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/31 13:48:12 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 17:41:41 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int		ft_isspace(char c)
 {
@@ -29,7 +30,6 @@ char 		*ft_strtrim(const char *s)
 {
 	char *new;
 	int i;
-	int j;
 	int k;
 
 	i = 0;

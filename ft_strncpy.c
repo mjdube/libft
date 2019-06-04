@@ -6,13 +6,15 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:06:44 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/21 10:23:45 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 17:43:42 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strncpy(char *dst, const char *src, size_t len)
+#include <string.h>
+
+char				*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	int i;
+	unsigned int	i;
 
 	i = 0;
 	while (src[i] != '\0' && i < len)

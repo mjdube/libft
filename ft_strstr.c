@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:21:53 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/27 13:08:40 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 17:45:58 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ char		*ft_strstr(const char *hay, const char *needle)
 {
 	int		i;
 	int		j;
-	char	*str;
 
 	i = 0;
 	if (hay[0] == '\0')

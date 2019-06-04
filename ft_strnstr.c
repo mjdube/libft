@@ -6,17 +6,17 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 13:39:47 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/22 14:59:10 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 17:49:14 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char		*ft_strnstr(const char *hay, const char *needle, size_t len)
+char				*ft_strnstr(const char *hay, const char *needle, size_t len)
 {
-	int		j;
-	int		i;
-	char	*str;
+	int				j;
+	unsigned int	i;
+	char			*str;
 
 	if (hay[0] == '\0')
 		return (NULL);

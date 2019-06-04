@@ -6,16 +6,19 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 15:43:32 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/30 13:57:16 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 14:10:29 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_bzero(void *s, size_t n)
+#include <string.h>
+
+void				ft_bzero(void *s, size_t n)
 {
-	char	*dst;
-	int	i;
+	char			*dst;
+	unsigned int	i;
 
 	dst = (char *)s;
+	i = 0;
 	while (i < n)
 	{
 		dst[i] = 0;

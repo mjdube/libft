@@ -6,16 +6,16 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:42:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/21 16:53:55 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/04 17:21:08 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char		*ft_strncat(char *s1, const char *s2, size_t n)
+char				*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int i;
-	int j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	while (s1[i])
