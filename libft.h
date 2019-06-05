@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:04:21 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/04 18:16:31 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/05 16:58:36 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int		ft_isalpha(unsigned char c);
+int		ft_isalpha(int c);
 int		ft_isalnum(unsigned char c);
 int		ft_isdigit(unsigned char c);
 int		ft_isprint(unsigned char c);
