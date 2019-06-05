@@ -6,19 +6,13 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 10:55:10 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/21 10:51:00 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/05 17:14:58 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isprint(unsigned char c)
+int			ft_isprint(int c)
 {
-	int output;
-
 	if (c >= ' ' && c <= '~')
-		output = 1;
-	else if (c == '\r' || c == '\t' || c == '\f' || c == '\v' || c == '\n')
-		output = 1;
-	else
-		output = 0;
-	return (output);
+		return (1);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 18:00:45 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/04 17:41:41 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/05 15:00:32 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,17 @@
 
 int		ft_isspace(char c)
 {
-	int i;
-
-	if (c == '\n' || c == '\v' || c  == '\f' || c == ' ' || c == '\r' || c == '\t')
-		i = 1;
-	else
-		i = 0;
-	return (i);
+	if (c == '\n' || c == '\v' || c  == '\f' || c == ' ' || 
+			c == '\r' || c == '\t')
+		return (1);
+	return (0);
 }
 
 char 		*ft_strtrim(const char *s)
 {
-	char *new;
-	int i;
-	int k;
+	char 	*new;
+	int		i;
+	int		k;
 
 	i = 0;
 	if (!(new = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)))

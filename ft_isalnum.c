@@ -6,11 +6,11 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 17:11:57 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/21 10:30:32 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/05 17:13:34 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalnum(unsigned char c)
+int		ft_isalnum(int c)
 {
 	int output;
 
