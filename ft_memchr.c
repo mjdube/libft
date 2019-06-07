@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:39:21 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/04 15:16:50 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/06 17:00:09 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,12 @@ void				*ft_memchr(const void *s, int c, size_t n)
 	chr = (char)c;
 	src = (char *)s;
 	i = 0;
-	while (src[i] && i < n)
+	while (n != 0)
 	{
 		if (src[i] == chr)
 			return (&src[i]);
 		i++;
+		n--;
 	}
 	return (NULL);
 }

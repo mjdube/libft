@@ -6,11 +6,12 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:09:57 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/04 15:34:37 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/06 17:51:23 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
 void				*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -21,11 +22,28 @@ void				*ft_memmove(void *dst, const void *src, size_t len)
 	s = (const char *)src;
 	d = (char *)dst;
 	i = 0;
-	while (s[i] && i < len)
+	if (s == NULL && d == NULL)
+		return (NULL);
+	else 
 	{
-		d[i] = s[i];
-		i++;
+		while (len != 0)
+		{
+			d[i] = s[i];
+			i++;
+			len--;
+		}
+		return (dst);
 	}
-	d[i] = '\0';
-	return (dst);
+	return (NULL);
+}
+
+#include <stdio.h>
+
+int		main(void)
+{
+	char *str = ft_strdup("abcdefghi");
+
+	ft_memmove(str + 3, str, 5);
+	printf("%s", str + 3);
+	return(0);
 }
