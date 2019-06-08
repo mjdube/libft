@@ -6,13 +6,15 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 11:48:00 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/21 11:23:19 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/07 15:30:56 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_strlen(char *str)
+#include <string.h>
+
+size_t			ft_strlen(char *str)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (str[i])

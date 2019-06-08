@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:09:57 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/06 17:51:23 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/08 11:34:56 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,28 +22,18 @@ void				*ft_memmove(void *dst, const void *src, size_t len)
 	s = (const char *)src;
 	d = (char *)dst;
 	i = 0;
+	if (s > d)
+		ft_memcpy(d, s, len);
 	if (s == NULL && d == NULL)
 		return (NULL);
 	else 
 	{
-		while (len != 0)
+		while (len > 0)
 		{
-			d[i] = s[i];
-			i++;
+			d[len - 1] = s[len - 1];
 			len--;
 		}
 		return (dst);
 	}
 	return (NULL);
-}
-
-#include <stdio.h>
-
-int		main(void)
-{
-	char *str = ft_strdup("abcdefghi");
-
-	ft_memmove(str + 3, str, 5);
-	printf("%s", str + 3);
-	return(0);
 }

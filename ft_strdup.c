@@ -6,14 +6,14 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:56:12 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/21 11:21:06 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/07 16:41:59 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 
-char		*ft_strdup(char *src)
+char		*ft_strdup(const char *src)
 {
 	int		i;
 	char	*dst;

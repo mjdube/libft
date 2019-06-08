@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 16:54:52 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/04 17:06:20 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/08 16:20:38 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,15 @@ size_t				ft_strlcat(char *dst, const char *src, size_t n)
 			i++;
 		return (i);
 	}
-	while (src[i])
+	while (dst[i])
 		i++;
 	while (dst[j] && 0 < n)
 	{
+		dst[j] = *src;
 		j++;
 		n--;
 	}
 	len = j + i;
+	dst[j] = '\0';
 	return (len);
 }

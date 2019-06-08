@@ -6,22 +6,22 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 13:16:49 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/06 17:08:31 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/08 12:41:05 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int				ft_memcmp(const void *s1, const void *s2, size_t l)
+int						ft_memcmp(const void *s1, const void *s2, size_t l)
 {
-	int			i;
-	int			n;
-	int			m;
-	const char	*a;
-	const char	*b;
+	int					i;
+	unsigned int		n;
+	unsigned int		m;
+	const unsigned char	*a;
+	const unsigned char	*b;
 
-	a = (char *)s1;
-	b = (char *)s2;
+	a = (const unsigned char *)s1;
+	b = (const unsigned char *)s2;
 	i = 0;
 	m = 0;
 	n = 0;
@@ -29,8 +29,8 @@ int				ft_memcmp(const void *s1, const void *s2, size_t l)
 	{
 		if (a[i] != b[i])
 		{
-			n = (int)a[i];
-			m = (int)b[i];
+			n = (unsigned int)a[i];
+			m = (unsigned int)b[i];
 			return (n - m);
 		}
 		i++;
