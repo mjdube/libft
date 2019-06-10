@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:21:53 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/04 17:45:58 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/10 16:56:02 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char		*ft_strstr(const char *hay, const char *needle)
 
 	i = 0;
 	if (hay[0] == '\0')
-		return (NULL);
+		return ((char *)hay);
 	while (hay[i])
 	{
 		j = 0;
@@ -27,11 +27,12 @@ char		*ft_strstr(const char *hay, const char *needle)
 		{
 			if (needle[j + 1] == '\0')
 			{
-				return (char *)&hay[i];
+				return (char *)hay;
 			}
+			hay++;
 			j++;
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }

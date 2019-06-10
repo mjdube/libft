@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 16:53:31 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/05 15:05:08 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/10 17:21:50 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int			ft_strequ(const char *s1, const char *s2)
 {
-	if (ft_strcmp(s1, s2) == 0)
-		return (1);
+	if (s1 && s2)
+	{
+		if (ft_strcmp(s1, s2) == 0)
+			return (1);
+	}
 	return (0);
 }
