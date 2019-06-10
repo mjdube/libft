@@ -6,22 +6,12 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 18:00:45 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/10 17:09:44 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/10 18:09:51 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
-
-int		ft_isspace(char c)
-{
-	if (c == '\n' || c == '\v' || c  == '\f' || c == ' ' || 
-			c == '\r' || c == '\t')
-		return (1);
-	return (0);
-}
 
 char 		*ft_strtrim(const char *s)
 {
