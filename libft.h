@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:04:21 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/08 10:21:29 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/10 17:52:01 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,5 @@ char			**ft_strsplit(const char *s, char c);
 
 unsigned char	ft_tolower(unsigned char c);
 unsigned char	ft_toupper(unsigned char c);
+int				ft_isspace(int c);
 #endif
