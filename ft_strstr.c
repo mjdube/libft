@@ -6,33 +6,31 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:21:53 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/10 16:56:02 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/11 16:16:36 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char		*ft_strstr(const char *hay, const char *needle)
+char				*ft_strstr(const char *hay, const char *needle)
 {
-	int		i;
-	int		j;
+	unsigned int	j;
+	unsigned int	i;
 
-	i = 0;
-	if (hay[0] == '\0')
+	if (!*needle)
 		return ((char *)hay);
-	while (hay[i])
+	j = 0;
+	while (hay[j] != '\0')
 	{
-		j = 0;
-		while (needle[j] == hay[i + j])
+		if (hay[j] == needle[0])
 		{
-			if (needle[j + 1] == '\0')
-			{
-				return (char *)hay;
-			}
-			hay++;
-			j++;
+			i = 0;
+			while (needle[i] != '\0' && hay[j + i] == needle[i])
+				++i;
+			if (needle[i] == '\0')
+				return ((char *)&hay[j]);
 		}
-		i++;
+		++j;
 	}
 	return (0);
 }

@@ -6,35 +6,20 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 17:01:18 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/04 17:25:28 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/11 17:37:44 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int					ft_strncmp(const char *s1, const char *s2, size_t n)
+int			ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
-	int				a;
-	int				b;
+	int		i;
 
+	if (n == 0)
+		return (0);
 	i = 0;
-	a = 0;
-	b = 0;
-	while (s1[i] && i < n)
-	{
-		if (s1[i] == s2[i])
-		{
-			a += (int)s1[i];
-			b += (int)s2[i];
-		}
-		else if (s1[i] != s2[i])
-		{
-			a = (int)s1[i];
-			b = (int)s2[i];
-			return (a - b);
-		}
+	while ((s1[i] && s2[i] && s1[i] == s2[i]) && ((size_t)i < n - 1))
 		i++;
-	}
-	return (a - b);
+	return (((unsigned char)s1[i]) - ((unsigned char)s2[i]));
 }

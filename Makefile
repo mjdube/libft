@@ -6,7 +6,7 @@
 #    By: event <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/04 11:02:28 by event             #+#    #+#              #
-#    Updated: 2019/06/10 18:02:55 by mdube            ###   ########.fr        #
+#    Updated: 2019/06/11 15:35:36 by mdube            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,14 +18,14 @@ INC = libft.h
 all: $(NAME)
 	
 $(NAME):
-	gcc -c -I -Wall -Werror -Wextra $(SRC) $(INC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@gcc -c -I -Wall -Werror -Wextra $(SRC) $(INC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all

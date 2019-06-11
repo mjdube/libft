@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 13:48:22 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/06 10:35:11 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/11 15:08:58 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,10 @@
 
 void				*ft_memalloc(size_t size)
 {
-	char			*s;
-	unsigned int	i;
 	void			*mem;
 
-	mem = NULL;
-	s = (char *)mem;
-	i = 0;
-
-	if (!(s = (char *)malloc(sizeof(size))))
+	if (!(mem = malloc(size)))
 		return (NULL);
-	else
-	{
-		while (i < size)
-		{
-			s[i] = 0;
-			i++;
-		}
-	}
-		return (mem);
+	ft_bzero(mem, size);
+	return (mem);
 }

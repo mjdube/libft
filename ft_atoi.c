@@ -6,30 +6,29 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:26:27 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/27 11:15:14 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/11 17:32:23 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
-{
-	int i;
-	int pos;
-	int neg;
+#include "libft.h"
 
-	i = 0;
+int					ft_atoi(const char *str)
+{
+	unsigned int	j;
+	unsigned int	neg;
+
 	neg = 1;
-	pos = 0;
-	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\v' || str[i] == '\r'
-			|| str[i] == '\v' || str[i] == '\n')
-		i++;
-	if (str[i] == '-')
+	j = 0;
+	while (*str && ft_isspace(*str) )
+		str++;
+	if (*str == '-')
 		neg = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str && *str >= '0' && *str <= '9')
 	{
-		pos = pos * 10 + (str[i] - 48);
-		i++;
+		j = j * 10 + (*str - 48);
+		str++;
 	}
-	return (pos * neg);
+	return (j * neg);
 }
