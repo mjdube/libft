@@ -6,17 +6,36 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:48:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/01 14:41:32 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/12 17:53:50 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 #include <string.h>
-#include <ctype.h>
-char **ft_strsplit(const char *s, char c)
+
+static int		ft_words(const char *s, char c)
 {
-	char **str;
+	unsigned int	i;
+	int				ctr;
+
+	i = 0;
+	ctr = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i] != c)
+			ctr++;
+		while (s[i] && (s[i] != c))
+			i++;
+	}
+	return (ctr);
+}
+
+char	**ft_strsplit(const char *s, char c)
+{
+	/*char **str;
 	size_t i;
 	size_t j;
 	size_t k;
@@ -44,17 +63,30 @@ char **ft_strsplit(const char *s, char c)
 			k = 0;
 		}
 	}
-	*str[j] = '\0';
-	return (str);
-}
+	*str[j] = '\0';*/
+	char		**tab;
+	int			i;
+	int			j;
+	int			k;
 
-int		main()
-{
-	char *str = "*hello***fellow***students";
-
-	char **n = ft_strsplit(str, '*');
-
-	printf("%s", n[1]);
-
-	return 0;
+	i = 0;
+	k = 0;
+	if (!(s))
+		return (NULL);
+	if (!(tab = (char **)malloc(sizeof(char *)*(ft_words(s, c)) + 1)))
+		return (NULL);
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		j = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i > j)
+		{
+			tab[k] = ft_strndup(s + j, i - j);
+		}
+	}
+	tab[k] = NULL;
+	return (tab);
 }

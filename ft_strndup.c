@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 15:31:57 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/12 16:25:51 by mdube            ###   ########.fr       */
+/*   Created: 2019/06/12 11:07:31 by mdube             #+#    #+#             */
+/*   Updated: 2019/06/12 13:10:09 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_strclr(char *s)
-{
-	int i;
+#include "libft.h"
+#include <stdlib.h>
+#include <string.h>
 
-	if (s)
-	{
-		i = 0;
-		while (s[i])
-		{
-			s[i] = '\0';
-			i++;
-		}
-	}
+char	*ft_strndup(const char *str, size_t n)
+{
+	char	*s;
+
+	s = (char *)malloc(sizeof(char) * n + 1);
+	if (s == NULL)
+		return (NULL);
+	s = ft_strncpy(s, (char *)str, n);
+	s[n] = '\0';
+	return (s);
 }

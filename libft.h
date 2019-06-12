@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:04:21 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/10 17:52:01 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/12 13:06:51 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ char			*ft_strstr(const char *hay, const char *needle);
 char			*ft_strsub(const char *s, unsigned int start, size_t len);
 char			*ft_strtrim(const char *s);
 char			**ft_strsplit(const char *s, char c);
+char			*ft_strndup(const char *str, size_t n);
 
 unsigned char	ft_tolower(unsigned char c);
 unsigned char	ft_toupper(unsigned char c);

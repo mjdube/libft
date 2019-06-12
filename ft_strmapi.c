@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 16:39:35 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/05 09:56:13 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/12 15:52:29 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 
 char		*ft_strmapi(const char *s, char (*f) (unsigned int, char))
 {
-	int		i;
-	char	*new;
+	unsigned int	i;
+	char			*result;
 
-	new = (char *)malloc(sizeof(s) * ft_strlen(s));
+	if (!s || !(result = (char *)ft_memalloc(ft_strlen(s) + 1)))
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
-		new[i] = f(i, (char)&s[i]);
+		result[i] = f(i, s[i]);
 		i++;
 	}
-	new[i] = '\0';
-	return (new);
+	return (result);
 }

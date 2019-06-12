@@ -6,21 +6,22 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 18:00:45 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/11 12:12:02 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/12 17:18:32 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <string.h>
 
-char 		*ft_strtrim(const char *s)
+char		*ft_strtrim(const char *s)
 {
+	char	*new;
+	int		i;
+	int		k;
+
 	if (s)
 	{
-		char 	*new;
-		int		i;
-		int		k;
-
 		i = 0;
 		if (!(new = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)))
 			return (NULL);
@@ -34,9 +35,7 @@ char 		*ft_strtrim(const char *s)
 			i++;
 		}
 		while (ft_isspace(new[k - 1]) == 1)
-		{
 			k--;
-		}
 		new[k] = '\0';
 		return (new);
 	}

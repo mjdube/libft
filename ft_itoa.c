@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:25:25 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/05 17:11:00 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/12 17:52:32 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,16 @@
 #include <stdio.h>
 #include <string.h>
 
-char		*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
-	
-}
+	char			*str;
+	unsigned int	nbr;
+	unsigned int	i;
+	unsigned int	size;
 
-int		main()
-{
+	if (nbr < 0)
+		n = (unsigned int)(nbr * -1);
+	else
+		n = (unsigned int)nbr;
 
-	printf("%s", ft_itoa(2));
-
-	return 0;
-}
+	}
