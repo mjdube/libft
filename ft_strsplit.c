@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:48:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/13 12:24:06 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/13 15:20:30 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,50 +14,71 @@
 #include "libft.h"
 #include <string.h>
 
-static int		ft_words(const char *s, char c)
+static int			ft_words(const char *s, char c)
 {
-	unsigned int	i;
-	int				ctr;
+	size_t			ctrl;
+	int				num;
 
-	i = 0;
-	ctr = 0;
-	while (s[i])
+	ctrl = 0;
+	num = 0;
+	if (s[ctrl] != c)
+		num++;
+	while (s[ctrl])
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != c)
-			ctr++;
-		while (s[i] && s[i + 1] != c && s[i + 1] != '\0')
-			i++;
+		if (s[ctrl] == c && s[ctrl + 1] != c && s[ctrl + 1] != '\0')
+			num++;
+		ctrl++;
 	}
-	return (ctr);
+	return (num);
 }
 
-char	**ft_strsplit(const char *s, char c)
+static	int			ft_len(const char *s, char c)
 {
-	char		**tab;
-	int			i;
-	int			j;
-	int			k;
+	int				ctrl;
 
-	i = 0;
-	k = 0;
-	if (!(s))
-		return (NULL);
-	if (!(tab = (char **)malloc(sizeof(char *)*(ft_words(s, c)) + 1)))
+	ctrl = 0;
+	while (s[ctrl] && s[ctrl] != c)
+		ctrl++;
+	return (ctrl);
+}
+
+static char			**ft_split(char const *s, char c, size_t i, size_t row)
+{
+	size_t			col;
+	char			**a;
+
+	if (!(a = (char**)malloc(sizeof(char*) * ft_words(s, c) + 1)))
 		return (NULL);
 	while (s[i])
 	{
-		while (s[i] == c)
+		if (s[i] == c)
 			i++;
-		j = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (i > j)
+		else
 		{
-			tab[k] = ft_strndup(s + j, i - j);
+			col = 0;
+			if (!(a[row] = (char*)malloc(sizeof(char) * ft_len(&s[i], c) + 1)))
+				return (NULL);
+			else
+			{
+				while (s[i] && s[i] != c)
+					a[row][col++] = s[i++];
+				a[row][col] = '\0';
+				row++;
+			}
 		}
 	}
-	tab[k] = NULL;
-	return (tab);
+	a[row] = 0;
+	return (a);
+}
+
+char				**ft_strsplit(char const *s, char c)
+{
+	size_t			ctrl;
+	size_t			col;
+
+	ctrl = 0;
+	col = 0;
+	if (!s)
+		return (NULL);
+	return (ft_split(s, c, ctrl, col));
 }
