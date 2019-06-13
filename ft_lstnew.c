@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:26:27 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/13 11:30:35 by mdube            ###   ########.fr       */
+/*   Created: 2019/06/13 15:31:47 by mdube             #+#    #+#             */
+/*   Updated: 2019/06/13 15:59:39 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int					ft_atoi(const char *str)
+t_list		*ft_lstnew(void const content, size_t content_size)
 {
-	unsigned int	j;
-	unsigned int	neg;
+	t_list	*fresh;
 
-	neg = 1;
-	j = 0;
-	while (*str && ft_isspace(*str))
-		str++;
-	if (*str == '-')
-		neg = -1;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (*str && *str >= '0' && *str <= '9')
+	if (!(fresh = (t_list *)ft_memalloc(t_list)))
+		return (NULL);
+	if (content == NULL)
 	{
-		j = j * 10 + (*str - 48);
-		str++;
+		fresh->content = NULL;
+		fresh->content_size = 0;
 	}
-	return (j * neg);
+	else
+	{
+		if (!())
+	}
+
 }
