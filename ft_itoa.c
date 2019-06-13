@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:25:25 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/13 11:47:05 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/13 13:18:52 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static int			get_nb_size(unsigned int nb)
 {
 	unsigned int	size;
-
+	
 	size = 0;
 	while (nb >= 10)
 	{
