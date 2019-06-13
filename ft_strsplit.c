@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:48:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/12 17:53:50 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/13 12:24:06 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int		ft_words(const char *s, char c)
 			i++;
 		if (s[i] != c)
 			ctr++;
-		while (s[i] && (s[i] != c))
+		while (s[i] && s[i + 1] != c && s[i + 1] != '\0')
 			i++;
 	}
 	return (ctr);
@@ -35,35 +35,6 @@ static int		ft_words(const char *s, char c)
 
 char	**ft_strsplit(const char *s, char c)
 {
-	/*char **str;
-	size_t i;
-	size_t j;
-	size_t k;
-
-	i = 0;
-	j = 0;
-	k = 0;
-	str = (char **)malloc(sizeof(char) * strlen(s) + 1);
-	while (s[i])
-	{
-		if (isalpha(s[i]) == 0)
-		{
-			i++;
-		}
-		else
-		{
-			while (isalpha(s[i]) == 1)
-			{
-				str[j][k] = s[i];
-				i++;
-				k++;
-			}
-			str[j][k] = '\0';
-			j++;
-			k = 0;
-		}
-	}
-	*str[j] = '\0';*/
 	char		**tab;
 	int			i;
 	int			j;

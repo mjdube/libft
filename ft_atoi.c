@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:26:27 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/11 17:32:23 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/13 11:30:35 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int					ft_atoi(const char *str)
 
 	neg = 1;
 	j = 0;
-	while (*str && ft_isspace(*str) )
+	while (*str && ft_isspace(*str))
 		str++;
 	if (*str == '-')
 		neg = -1;

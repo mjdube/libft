@@ -6,16 +6,16 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:25:25 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/05 17:11:00 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/13 11:47:05 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <string.h>
 
-static int	get_nb_size(unsigned int nb)
+static int			get_nb_size(unsigned int nb)
 {
-	unsigned int size;
+	unsigned int	size;
 
 	size = 0;
 	while (nb >= 10)
@@ -26,14 +26,13 @@ static int	get_nb_size(unsigned int nb)
 	return (size + 1);
 }
 
-char			*ft_itoa(int n)
+char				*ft_itoa(int n)
 {
-
-	char		*str;
+	char			*str;
 	unsigned int	nb;
 	unsigned int	index;
 	unsigned int	size;
-
+	
 	if (n < 0)
 		nb = (unsigned int)(n * -1);
 	else
@@ -52,5 +51,5 @@ char			*ft_itoa(int n)
 	}
 	str[index] = (char)(nb % 10 + 48);
 	str[size] = '\0';
-	return (str);	
+	return (str);
 }
