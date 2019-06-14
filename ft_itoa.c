@@ -6,14 +6,14 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:25:25 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/13 13:18:52 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/14 13:24:03 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <string.h>
 
-static int			get_nb_size(unsigned int nb)
+static int			ft_get_nb_size(unsigned int nb)
 {
 	unsigned int	size;
 	
@@ -37,7 +37,7 @@ char				*ft_itoa(int n)
 		nb = (unsigned int)(n * -1);
 	else
 		nb = (unsigned int)n;
-	size = (unsigned int)get_nb_size(nb);
+	size = (unsigned int)ft_get_nb_size(nb);
 	index = 0;
 	if (!(str = (char *)malloc(sizeof(char) * (size + 1 + (n < 0 ? 1 : 0)))))
 		return (0);

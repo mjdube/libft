@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 17:09:12 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/12 17:03:46 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/14 16:41:43 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,10 @@
 
 char				*ft_strsub(const char *s, unsigned int start, size_t len)
 {
-	char			*new;
-	unsigned int	i;
-	int				j;
-
-	if (s)
-	{
-		if (!(new = (char *)malloc(sizeof(char) * len + 1)))
-			return (NULL);
-		i = start;
-		j = 0;
-		ft_strncpy(new, (char *)s + start, len);
-		return (new);
-	}
-	return (0);
+	char			*fresh;
+	
+	if (!(s) || !(fresh = ft_memalloc(len + 1)))
+		return (NULL);
+	fresh = ft_strncpy(fresh, (char *)s + start, len);
+	return (fresh);
 }
