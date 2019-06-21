@@ -6,10 +6,11 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 13:02:03 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/12 16:35:26 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/19 09:41:33 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
 void		ft_putendl(char const *s)

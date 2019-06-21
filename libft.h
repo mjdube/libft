@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:04:21 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/18 10:27:02 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/21 13:40:45 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char			*ft_strchr(const char *str, int n);
 char			*ft_strsub(const char *s, unsigned int start, size_t len);
 void			ft_strclr(char *s);
 int				ft_strcmp(const char *s1, const char *s2);
-char			*ft_strcpy(char *dst, char *src);
+char			*ft_strcpy(char *dst, const char *src);
 void			ft_strdel(char **as);
 char			*ft_strdup(char const *src);
 int				ft_strequ(const char *s1, const char *s2);
@@ -73,7 +73,9 @@ char			*ft_strtrim(const char *s);
 char			**ft_strsplit(const char *s, char c);
 char			*ft_strndup(const char *str, size_t n);
 
-unsigned char	ft_tolower(unsigned char c);
-unsigned char	ft_toupper(unsigned char c);
+int				ft_tolower(int c);
+int				ft_toupper(int c);
 int				ft_isspace(int c);
+
+int				ft_abs(int x);
 #endif

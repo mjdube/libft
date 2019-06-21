@@ -6,10 +6,11 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 09:41:48 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/18 10:27:21 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/19 09:15:57 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -26,7 +27,7 @@ static int			getnb_size(unsigned int nb)
 	return (size + 1);
 }
 
-char				*itoa(int n)
+char				*ft_itoa(int n)
 {
 	char			*str;
 	unsigned int	nb;

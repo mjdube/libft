@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:48:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/13 16:46:01 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/19 13:11:31 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,30 @@
 
 static int			ft_words(const char *s, char c)
 {
-	size_t			ctrl;
+	size_t			i;
 	int				num;
 
-	ctrl = 0;
+	i = 0;
 	num = 0;
-	if (s[ctrl] != c)
+	if (s[i] != c)
 		num++;
-	while (s[ctrl])
+	while (s[i])
 	{
-		if (s[ctrl] == c && s[ctrl + 1] != c && s[ctrl + 1] != '\0')
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
 			num++;
-		ctrl++;
+		i++;
 	}
 	return (num);
 }
 
 static	int			ft_len(const char *s, char c)
 {
-	int				ctrl;
+	int				i;
 
-	ctrl = 0;
-	while (s[ctrl] && s[ctrl] != c)
-		ctrl++;
-	return (ctrl);
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
 }
 
 static char			**ft_split(char const *s, char c, size_t i, size_t row)
@@ -73,12 +73,12 @@ static char			**ft_split(char const *s, char c, size_t i, size_t row)
 
 char				**ft_strsplit(char const *s, char c)
 {
-	size_t			ctrl;
-	size_t			col;
+	size_t			i;
+	size_t			j;
 
-	ctrl = 0;
-	col = 0;
+	i = 0;
+	j = 0;
 	if (!s)
 		return (NULL);
-	return (ft_split(s, c, ctrl, col));
+	return (ft_split(s, c, i, j));
 }

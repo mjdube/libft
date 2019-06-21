@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 16:42:08 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/19 12:15:59 by mdube            ###   ########.fr       */
+/*   Created: 2019/06/19 13:15:25 by mdube             #+#    #+#             */
+/*   Updated: 2019/06/19 13:24:02 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <string.h>
-
-char				*ft_strncat(char *s1, const char *s2, size_t n)
+int			ft_abs(int x)
 {
-	unsigned int	i;
-	unsigned int	j;
-
-	i = 0;
-	while (s1[i])
-		i++;
-	j = 0;
-	while (s2[j] != '\0' && j < n)
+	if (x < 0)
 	{
-		s1[i + j] = s2[j];
-		j++;
+		return (-(x));
 	}
-	s1[i + j] = '\0';
-	return (s1);
+	return (x);
 }

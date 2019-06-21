@@ -6,10 +6,11 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 11:21:53 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/11 16:16:36 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/19 12:39:41 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 char				*ft_strstr(const char *hay, const char *needle)

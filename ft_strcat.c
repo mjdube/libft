@@ -6,11 +6,13 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:38:53 by mdube             #+#    #+#             */
-/*   Updated: 2019/05/29 18:18:06 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/19 12:50:11 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strcat(char *s1, char *s2)
+#include "libft.h"
+
+char		*ft_strcat(char *s1, const char *s2)
 {
 	int i;
 	int j;

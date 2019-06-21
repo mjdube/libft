@@ -6,15 +6,19 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 15:36:04 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/12 16:26:36 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/19 12:10:04 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void		ft_striter(char *s, void (*f)(char *))
 {
-	int i;
+	int		i;
 
-	if (s)
+	if (!s || !f)
+		return ;
+	else
 	{
 		i = 0;
 		while (s[i])

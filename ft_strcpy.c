@@ -6,11 +6,13 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:58:59 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/12 16:02:50 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/21 13:41:01 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strcpy(char *dst, char *src)
+#include "libft.h"
+
+char		*ft_strcpy(char *dst, const char *src)
 {
 	int i;
 

@@ -6,10 +6,11 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 09:55:54 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/10 15:24:54 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/19 12:05:20 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 char		*ft_strchr(const char *str, int n)
