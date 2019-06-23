@@ -6,7 +6,7 @@
 /*   By: mdube <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 11:04:21 by mdube             #+#    #+#             */
-/*   Updated: 2019/06/21 13:40:45 by mdube            ###   ########.fr       */
+/*   Updated: 2019/06/23 15:39:12 by mdube            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct			s_list *next;
+}					t_list;
+
 
 int				ft_isalpha(int c);
 int				ft_isalnum(int c);
